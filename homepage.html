@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="homepage.css"/>
+  <link href=<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <meta charset="utf-8"/>
+
+  <script type="text/javascript">
+		function checkUserNameAndPassword() {
+      // retrieve the value entered for username
+			var username = document.getElementById("uname").value;
+			// check if the username is entered. Otherwise, alert a message and return false.
+
+			if (username == "") {
+				alert("Enter user name");
+				return false;
+			}
+			// A username should consist of 8 characters consisting of letters (upper or lower),
+			// digits, a hyphen or an underscore. Complete the statement below by giving a
+			// correct regex to validate the username. Give your regex in between the / /.
+
+			if (username.match(/^[-$a-zA-Z0-9_]{8}$/) == null) {
+				alert("Invalid Format.8 characters. letters, digits, - or _. starting with a letter.");
+				document.getElementById("uname").focus();
+				return false;
+			}
+			// retrieve the value entered for password and retyped password
+			// and check if they are same.
+			var password = document.getElementById("pswd").value;
+
+			if (password.match(/^[$a-zA-Z0-9_]{6,16}$/) == null) {
+				alert("Invalid Format.6 to 10 characters. Only letters, digits, a $ and an _");
+				document.getElementById("pswd").focus();
+				return false;
+			}
+			var password2 = document.getElementById("pswd2").value;
+			if (password == password2) { // password is correctly retyped
+				return true;
+			} else {
+				alert("Password is not retyped correctly. Retype please.");
+				document.getElementById("pswd2").focus();
+				return false;
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+<h2>Book Matching Recommendation System</h2>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="processor.php" method = "post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="fname" required>
+
+      <label><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="lname" required>
+
+      <label><b>Create a username</b></label>
+      <input type="text" placeholder="Create Username" name="uname" required>
+
+      <label><b>Create a password</b></label>
+      <input type="password" placeholder="Create Password" name="pswd" required>
+
+      <label><b>Confirm password</b></label>
+      <input type="password" placeholder="Confirm Password" name="pswd2" required>
+      <label><b>I am a</b></label>
+      <select name = "clientid">
+        <option value = "Student"> Student </option>
+        <option value = "Teacher"> Teacher </option>
+      </select> <br />
+
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="processor.php" method = "post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pswd" required>
+
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
