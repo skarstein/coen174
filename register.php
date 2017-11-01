@@ -3,10 +3,10 @@
     // Press the 'Run' button on the top to start the web server,
     // then click the URL that is emitted to the Output tab of the console.
 
-    $servername = getenv('IP');
-    $username = getenv('C9_USER');
-    $password = "";
-    $database = "c9";
+    $servername = getenv('dbserver.engr.scu.edu');
+    $username = getenv('shu');
+    $password = "group2";
+    $database = "sdb_shu";
     $dbport = 3306;
 
     // Create connection
@@ -18,11 +18,11 @@
     }
     echo "Connected successfully (".$db->host_info.")";
 
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $id = $_POST["id"];
+    $firstname = $_POST["fname"];
+    $lastname = $_POST["lname"];
+    $username = $_POST["uname"];
+    $password = $_POST["pswd"];
+    $type = $_POST["type"];
 
     echo($firstname);
     echo($lastname);
@@ -31,13 +31,13 @@
     echo($id);
 
     $sql = "INSERT INTO user(firstname, lastname, username, password, type)
-    VALUES ("."'".$firstname."','".$lastname."','".$username."','".$password."'
+    VALUES ($firstname, $lastname, $username, $password, $type);
     echo($sql);
 
     if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully created an account");</script>';
         $db->close();
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
     } else {
         echo "Error: " . $sql . "<br>" . $db->error;
     }
