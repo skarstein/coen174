@@ -18,16 +18,16 @@
     }
     echo "Connected successfully (".$db->host_info.")";
 
-    $booktitle = $_POST["title"];i
+    $booktitle = $_POST["title"];
     $authorfirstname = $_POST["author_f"];
     $authorlastname = $_POST["author_l"];
     $copyrightdate = $_POST["copyright"];
     $lexilelevel = $_POST["lexile"];
     $numberofpages = $_POST["pages"];
-     $boolrecommended = $_POST["recommended"];
-      $booktopic = $_POST["topic"];
-       $bookpprotag_n = $_POST["pprotag_n"];
-        $booksprotag_n = $_POST["sprotag_n"];
+    $boolrecommended = $_POST["recommended"];
+    $booktopic = $_POST["topic"];
+    $bookpprotag_n = $_POST["pprotag_n"];
+    $booksprotag_n = $_POST["sprotag_n"];
 
     echo($booktitle);
     echo($authorfirstname);
@@ -35,18 +35,18 @@
     echo($copyrightdate);
     echo($lexilelevel);
     echo($lexilelevel);
-   echo($numberofpages);
-   echo($boolrecommended);
-   echo($booktopic);
-   echo($bookpprotag_n);
-   echo($booksprotag_n);
+    echo($numberofpages);
+    echo($boolrecommended);
+    echo($booktopic);
+    echo($bookpprotag_n);
+    echo($booksprotag_n);
 
 
     $booktitle = mysql_real_escape_string($booktitle);
     $authorfirstname= mysql_real_escape_string($authorfirstname);
     $authorlastname = mysql_real_escape_string($authorlastname);
     $copyrightdate = mysql_real_escape_string($copyrightdate);
-        $lexilelevel = mysql_real_escape_string($lexilelevel);
+    $lexilelevel = mysql_real_escape_string($lexilelevel);
 
     $numberofpages = mysql_real_escape_string($numberofpages);
 
@@ -55,7 +55,7 @@
     $booktopic = mysql_real_escape_string($booktopic);
 
     $bookpprotag_n = mysql_real_escape_string($bookpprotag_n);
-        $booksprotag_n = mysql_real_escape_string($booksprotag_n);
+    $booksprotag_n = mysql_real_escape_string($booksprotag_n);
 
     $sql = "INSERT INTO books(title, author_f, author_l, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n) VALUES ('" .$booktitle. "', '" .$authorfirstname. "','" .$authorlastname. "','" .$copyrightdate."','".$lexilelevel."','".$numberofpages."','".$boolrecommended."','".$booktopic."','".$bookpprotag_n."')";
     echo($sql);
