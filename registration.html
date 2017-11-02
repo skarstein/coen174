@@ -15,15 +15,7 @@
       // A username should consist of 8 characters consisting of letters (upper or lower),
       // digits, a hyphen or an underscore. Complete the statement below by giving a
       // correct regex to validate the username. Give your regex in between the / /.
-      /*
-      if (username.match(/^[-$a-zA-Z0-9_]{8}$/) == null) {
-        alert("Invalid Format.8 characters. letters, digits, - or _. starting with a letter.");
-        document.getElementById("uname").focus();
-        return false;
-      }
-      */
-      // retrieve the value entered for password and retyped password
-      // and check if they are same.
+      
       var password = document.getElementById("pswd").value;
 
       if (password.match(/^[$a-zA-Z0-9_]{6,16}$/) == null) {
@@ -55,7 +47,7 @@
       <input type="text" placeholder="First Name" id = "fname" name="fname" required>
 
       <br><b>Last Name</b><br>
-      <input type="text" placeholder="Last Name" id = "lname" ame="lname" required>
+      <input type="text" placeholder="Last Name" id = "lname" name="lname" required>
 
       <br><b>Create a username</b><br>
       <!--Username needs to be 8 characters consisting of letters (upper or lower case), digits, a hyphen, or an underscore.-->
@@ -75,6 +67,7 @@
       <button type="submit" onclick="return checkUserNameAndPassword()">Create account</button>
   </fieldset>
   </form>
+
   </body>
 
 </HTML>

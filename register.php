@@ -35,8 +35,16 @@
     $username = mysql_real_escape_string($username);
     $type = mysql_real_escape_string($type);
 
-    $sql = "INSERT INTO user(firstname, lastname, username, password, type)
-    VALUES ($firstname, $lastname, $username, $password, $type);
+    $options = [
+    'cost' = 11,
+    'salt' = mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+    ];
+    $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
+    echo($hashed_password);
+
+    echo($type);
+
+    $sql = "INSERT INTO user(firstname, lastname, username, password, type) VALUES ('" .$firstname. "', '" .$lastname. "','" .$username. "','" .$hashed_password."','".$type."')";
     echo($sql);
 
     if ($db->query($sql) === TRUE) {
