@@ -90,6 +90,7 @@ window.onclick = function(event) {
     <a href="createabook.html">Course 2</a>
     <a href="createabook.html">Course 3</a>
   </div>
+  <a href = "editPage.html"><button> Edit Table </button> </a>
 </div>
 <?php
 $servername = "dbserver.engr.scu.edu";
@@ -99,25 +100,46 @@ $dbname = 'sdb_shu';
 
 $connection = mysql_connect($servername, $username, $password);
 mysql_select_db($dbname, $connection);
+$sql = "SELECT * FROM books;
+$result = $connection->query($sql);
+?>
 
-$result = mysql_query('SHOW TABLES', $connection) or die('cannot show tables');
-while($tableName = mysql_fetch_row($result)) {
-    $table = $tableName[0];
-    echo '</h3>',$table,'</h3>';
-    $result2 = mysql_query('SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
-    if(mysql_num_rows($result2)) {
-        echo '<table cellpadding="0" cellspacing="0" class="db-table">';
-        echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
-        while($row2 = mysql_fetch_row($result2)) {
-            echo '<tr>';
-            foreach($row2 as $key=>$value) {
-                echo '<td>',$value,'</td>';
-            }
-            echo '</tr>';
-        }
-        echo '</table><br />';
-    }
+<table class="table">
+ <thead>
+   <tr>
+     <th>Title</th>
+     <th>Author first name</th>
+     <th>Author last name</th>
+     <th>copyright</th>
+     <th>lexile</th>
+     <th>pages</th>
+     <th>recommended</th>
+     <th>topic</th>
+     <th>protagonist nature</th>
+     <th>secondary protagonist nature</th>
+   </tr>
+ </thead>
+ <tbody>
+ <?php
+ while($row=$result->fetch_assoc()){
+   echo
+     "<tr>
+       <td>".$row['title']."</td>
+       <td>".$row['author_f']."</td>
+       <td>".$row['author_l']."</td>
+       <td>".$row['copyright']."</td>
+       <td>".$row['lexile']."</td>
+       <td>".$row['pages']."</td>
+       <td>".$row['recommended']."</td>
+       <td>".$row['topic']."</td>
+       <td>".$row['pprotag_n']."</td>
+       <td>".$row['sprotag_n']."</td>
+      </tr>";
 }
+
+$connection->close();
+
 ?>
 </body>
+</table>
 </HTML>
