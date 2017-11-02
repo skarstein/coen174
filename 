@@ -1,0 +1,135 @@
+commit 4cbc509a26a22c44ed67c5918d8d8fd215c31312
+Merge: 0be7543 814099b
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Thu Nov 2 09:58:44 2017 -0700
+
+    Merge pull request #6 from colby-harper/dev-fix-edit
+    
+    Dev fix edit
+
+commit 814099b147c80a431c74b6c80a5ed0f8e641ea6b
+Author: Colby Harper <charper@scu.edu>
+Date:   Thu Nov 2 09:57:35 2017 -0700
+
+    bug fix and polish editPage.php
+
+commit 5cefc4dc09737c9cc0b1346f57c5735bb50cfc3c
+Author: Colby Harper <charper@scu.edu>
+Date:   Thu Nov 2 09:56:10 2017 -0700
+
+    polish editPage.html
+
+commit 0be75437f2648e48188c9bd879d901e43d0c043d
+Merge: 448785e d1cae15
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Thu Nov 2 09:49:18 2017 -0700
+
+    Merge pull request #5 from colby-harper/dev-branch
+    
+    Dev branch
+
+commit d1cae15b101f3880f93a9e613b7a6a881bbe1e1d
+Author: angelina r poole <apoole@linux60807.dc.engr.scu.edu>
+Date:   Thu Nov 2 09:17:30 2017 -0700
+
+    php access
+
+commit c2cea95de694a05374e6898f6dc038733b4be2f9
+Author: angelina r poole <apoole@linux60417.dc.engr.scu.edu>
+Date:   Thu Nov 2 00:07:24 2017 -0700
+
+    editPage table and php
+
+commit 448785eb51fa977b50ccfdf125bd09f37cd8844a
+Author: angelina r poole <apoole@linux60417.dc.engr.scu.edu>
+Date:   Wed Nov 1 23:35:14 2017 -0700
+
+    changes to accountpage and displaying the html sql table
+
+commit abd0bb24c17ef5edb6461f54e14d7c16723cd8dd
+Author: angelina r poole <apoole@linux60417.dc.engr.scu.edu>
+Date:   Wed Nov 1 22:56:48 2017 -0700
+
+    changes to register.php
+
+commit a16fad0dd9bafd9bf16c02aebb8e9cea7c705057
+Merge: 8d7c4a0 4a6fa69
+Author: Osm0 <stevenhu12@gmail.com>
+Date:   Wed Nov 1 22:52:58 2017 -0700
+
+    Merge pull request #4 from colby-harper/steeb
+    
+    added display table to accountpage.html
+
+commit 4a6fa693f2a155c01252009cbe6f288d429329e1
+Author: steven hu <shu@linux60416.dc.engr.scu.edu>
+Date:   Wed Nov 1 22:50:59 2017 -0700
+
+    added display table to accountpage.html
+
+commit 8d7c4a0d865a43ad6e3ec3952abd9010c5aac657
+Merge: 86dcbb4 f0510ab
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Wed Nov 1 22:37:17 2017 -0700
+
+    Merge pull request #3 from colby-harper/dev-colby2
+    
+    added css and php code to display atable from our database
+
+commit f0510ab0a89e230abb02a30dba511b19434f4de9
+Author: colby curtis harper <charper@linux60418.dc.engr.scu.edu>
+Date:   Wed Nov 1 22:36:26 2017 -0700
+
+    added css and php code to display atable from our database
+
+commit 86dcbb4d52018c03f0319e412de9ae6a420a1eff
+Merge: 635068c e3476ac
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Wed Nov 1 22:10:58 2017 -0700
+
+    Merge pull request #2 from colby-harper/dev-colby
+    
+    added error check and fixed bug where id was referenced instead of type
+
+commit e3476ac9e53bc24050a9065da11934b33e935d3b
+Author: colby curtis harper <charper@linux60418.dc.engr.scu.edu>
+Date:   Wed Nov 1 22:09:01 2017 -0700
+
+    added error check and fixed bug where id was referenced instead of type
+
+commit 635068ce4e5606b0a89d6437ee4481d3c4744ec9
+Author: angelina r poole <apoole@linux60417.dc.engr.scu.edu>
+Date:   Wed Nov 1 21:33:14 2017 -0700
+
+    added cgi file
+
+commit 987e0ae818fb49d90f0619bcc5759570b3c4b00b
+Merge: 2befaee 810b860
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Wed Nov 1 15:06:53 2017 -0700
+
+    Merge pull request #1 from colby-harper/angelinabranch
+    
+    Angelinabranch
+
+commit 810b860a8543c19427109c59c3dba5f2cc4346c5
+Author: Angelina Poole <apoole@scu.edu>
+Date:   Wed Nov 1 15:06:10 2017 -0700
+
+    new changes
+    
+    new changes
+
+commit 0b9ebe4437fc8587b7c0c1605ce1a0717b206eb2
+Author: Angelina Poole <apoole@scu.edu>
+Date:   Wed Nov 1 14:54:29 2017 -0700
+
+    In progress
+    
+    In Progress
+
+commit 2befaee62dfc37d9b6d9fdad39899e8d7b2d1a1c
+Author: Colby Harper <colby@angazadesign.com>
+Date:   Thu Oct 26 14:33:51 2017 -0700
+
+    Initial commit

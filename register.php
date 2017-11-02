@@ -3,49 +3,48 @@
     // Press the 'Run' button on the top to start the web server,
     // then click the URL that is emitted to the Output tab of the console.
 
-    $servername = getenv('dbserver.engr.scu.edu');
-    $username = getenv('shu');
+    $servername = "dbserver.engr.scu.edu";
+    $username = "shu";
     $password = "group2";
     $database = "sdb_shu";
-    $dbport = 3306;
 
     // Create connection
-    $db = new mysqli($servername, $username, $password, $database, $dbport);
+    $db = new mysqli($servername, $username, $password, $database);
 
     // Check connection
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);
     }
-    echo "Connected successfully (".$db->host_info.")";
+    //echo "Connected successfully (".$db->host_info.")";
 
     $firstname = $_POST["fname"];
     $lastname = $_POST["lname"];
     $username = $_POST["uname"];
     $password = $_POST["pswd"];
-    $type = $_POST["type"];
+    $type = $_POST["clientid"];
 
-    echo($firstname);
-    echo($lastname);
-    echo($username);
-    echo($password);
-    echo($type);
+   // echo($firstname);
+   // echo($lastname);
+   // echo($username);
+    //echo($password);
 
-    $firstname = mysql_real_escape_string($firstname);
-    $lastname = mysql_real_escape_string($lastname);
-    $username = mysql_real_escape_string($username);
-    $type = mysql_real_escape_string($type);
+    //$firstname = mysql_real_escape_string($firstname);
+    //$lastname = mysql_real_escape_string($lastname);
+    //$username = mysql_real_escape_string($username);
+    //$type = mysql_real_escape_string($type);
 
+    $salt = openssl_random_pseudo_bytes(22);
     $options = [
-    'cost' = 11,
-    'salt' = mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+       'salt' => $salt,
     ];
+    
     $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
-    echo($hashed_password);
+    //echo($hashed_password);
 
-    echo($type);
+    //echo($type);
 
-    $sql = "INSERT INTO user(firstname, lastname, username, password, type) VALUES ('" .$firstname. "', '" .$lastname. "','" .$username. "','" .$hashed_password."','".$type."')";
-    echo($sql);
+    $sql = "INSERT INTO users(firstname, lastname, username, password, type, salt) VALUES ('" .$firstname. "', '" .$lastname. "','" .$username. "','" .$hashed_password."','".$type."','".$salt."')";
+    //echo($sql);
 
     if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully created an account");</script>';
