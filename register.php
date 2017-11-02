@@ -28,7 +28,12 @@
     echo($lastname);
     echo($username);
     echo($password);
-    echo($id);
+    echo($type);
+
+    $firstname = mysql_real_escape_string($firstname);
+    $lastname = mysql_real_escape_string($lastname);
+    $username = mysql_real_escape_string($username);
+    $type = mysql_real_escape_string($type);
 
     $sql = "INSERT INTO user(firstname, lastname, username, password, type)
     VALUES ($firstname, $lastname, $username, $password, $type);
