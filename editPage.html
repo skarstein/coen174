@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <link rel="stylesheet" type="text/css" href="registration.css"/>
+  <link href=<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <script type="text/javascript">
+    function checkUserNameAndPassword() {
+      // retrieve the value entered for username
+      var username = document.getElementById("uname").value;
+      // check if the username is entered. Otherwise, alert a message and return false.
+      if (username == "") {
+        //alert("Enter user name");
+        return false;
+      }
+      // A username should consist of 8 characters consisting of letters (upper or lower),
+      // digits, a hyphen or an underscore. Complete the statement below by giving a
+      // correct regex to validate the username. Give your regex in between the / /.
+      
+      var password = document.getElementById("pswd").value;
+
+      if (password.match(/^[$a-zA-Z0-9_]{6,16}$/) == null) {
+        alert("Invalid Format.6 to 10 characters. Only letters, digits, a $ and an _");
+        document.getElementById("pswd").focus();
+        return false;
+      }
+      var password2 = document.getElementById("pswd2").value;
+      if (password == password2) { // password is correctly retyped
+        //alert("Submitting the form...");
+        return true;
+      } else {
+        alert("Password is not retyped correctly. Retype please.");
+        document.getElementById("pswd2").focus();
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+<title>Account Registration</title>
+<h1>Book Matching Recommendation System</h1>
+<h2>Account Registration</h2>
+
+  <form action = "editPage.php" method = "post">
+  <fieldset>
+      <b>Book Title</b><br>
+      <input type="text" placeholder="Book Title" id = "title" name="title" required>
+
+      <br><b>Author's First Name</b><br>
+      <input type="text" placeholder="Author's First Name" id = "author_f" name="author_f" required>
+      <br><b>Author's Last Name</b><br>
+      <input type="text" placeholder="Author's Last Name" id = "author_l" name="author_l" required>
+<br><b>Copyright Date</b><br>
+<input type="date" placeholder="Copyright Date" id = "copyright" name="copyright" required>
+<br><b>Lexile Reading Level</b></br>
+<input type="number" placeholder="Lexile Rate" id = "lexile" name="lexile" required>
+<br><b>Number of Pages</b></br>
+<input type="number" placeholder="Number of Pages" id = "pages" name="pages" required>
+
+<br><label><b>Recommended</b><br>
+<select name = "recommended">
+<option value = "0"> Yes </option>
+<option value = "1"> No </option>
+</select> <br />
+<br><b>Topic</b></br>
+<input type="text" placeholder="Topic" id = "topic" name="topic" required>
+<br><b>Primary Protagonist Ntaure</b></br>
+<input type="text" placeholder="Primary Protagonist Nature" id = "pprotag_n" name="pprotag_n" required>
+<br><b>Secondary Protagonist Nature</b></br>
+<input type="text" placeholder="Secondary Protagonist Nature" id = "sprotag_n" name="sprotag_n" required>
+        <button type="submit">Add Book</button>
+  </fieldset>
+  </form>
+
+  </body>
+
+</HTML>
