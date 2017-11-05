@@ -138,6 +138,7 @@ $result = $connection->query($sql);
        <td>".$row['topic']."</td>
        <td>".$row['pprotag_n']."</td>
        <td>".$row['sprotag_n']."</td>
+       <td><button class="editbtn">edit</button></td>
       </tr>";
 }
 
