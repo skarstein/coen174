@@ -95,7 +95,7 @@ table, th, td {
     <a href="createabook.html">Course 2</a>
     <a href="createabook.html">Course 3</a>
   </div>
-  <a href = "editPage.html"><button> Add Books </button> </a>
+  <a href = "createbook.html"><button> Add Books </button> </a>
 </div>
 <?php
 $servername = "dbserver.engr.scu.edu";
