@@ -138,7 +138,7 @@ $result = $connection->query($sql);
        <td>".$row['topic']."</td>
        <td>".$row['pprotag_n']."</td>
        <td>".$row['sprotag_n']."</td>
-       <td><a href="editPage.html"><button>edit</button></a></td>
+       <td><a href=\"editPage.html\"><button>edit</button></a></td>
        <td><button>delete</button></td>
       </tr>";
 }
