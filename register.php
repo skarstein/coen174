@@ -6,15 +6,15 @@
     if(isset($_POST["fname"])
 	    && isset($_POST["lname"])
 	    && isset($_POST["uname"])
-	    && isset($_SESSION["pswd"])) {
+	    && isset($_POST["pswd"])) {
 
     	$servername = "dbserver.engr.scu.edu";
-    	$username = "shu";
-    	$password = "group2";
+    	$usrname = "shu";
+    	$pssword = "group2";
     	$database = "sdb_shu";
 
     	// Create connection
-    	$db = mysqli_connect($servername, $username, $password, $database);
+    	$db = mysqli_connect($servername, $usrname, $pssword, $database);
 
     	// Check connection
     	if ($db->connect_error) {
