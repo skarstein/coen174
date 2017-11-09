@@ -3,10 +3,10 @@
     // Press the 'Run' button on the top to start the web server,
     // then click the URL that is emitted to the Output tab of the console.
 
-    if(isset($_POST["fname"])
-	    && isset($_POST["lname"])
-	    && isset($_POST["uname"])
-	    && isset($_POST["pswd"])) {
+//    if(isset($_POST["fname"])
+//	    && isset($_POST["lname"])
+//	    && isset($_POST["uname"])
+//	    && isset($_POST["pswd"])) {
 
     	$servername = "dbserver.engr.scu.edu";
     	$usrname = "shu";
@@ -22,7 +22,7 @@
     	}
 
     	$firstname = $db->real_escape_string($_POST["fname"]);
-    	$lastname = $dp->real_escape_string($_POST["lname"]);
+    	$lastname = $db->real_escape_string($_POST["lname"]);
     	$username = $db->real_escape_string($_POST["uname"]);
     	$password = $db->real_escape_string($_POST["pswd"]);
     	$type = $_POST["clientid"];
@@ -45,8 +45,8 @@
     	}
 
     	$db->close();
-    } else {
-	echo'<script>alert("Failed to register.");</scipt>';
-	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
-    }
+//    } else {
+//	echo'<script>alert("Failed to register.");</scipt>';
+//	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
+//    }
 ?>
