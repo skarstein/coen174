@@ -10,12 +10,12 @@
         // then click the URL that is emitted to the Output tab of the console.
 
         $servername = "dbserver.engr.scu.edu";
-        $username = "shu";
-        $password = "group2";
+        $usrname = "shu";
+        $pssword = "group2";
         $database = "sdb_shu";
 
         // Create connection
-        $db = new mysqli($servername, $username, $password, $database);
+        $db = mysqli_connect($servername, $usrname, $pssword, $database);
 
         // Check connection
         if ($db->connect_error) {
@@ -33,7 +33,6 @@
                     'salt' => $row["salt"],
                 ];
                 $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
-                //echo($hashed_password);
 
                 if($hashed_password==$row["password"]){
                    $_SESSION['users'] = $username;
@@ -42,7 +41,6 @@
                   }
                 else{
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
-               
 		    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
         }else{
