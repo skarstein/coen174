@@ -42,13 +42,13 @@
                    $db->close();
                 }
                 else{
-                    //echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
                     $db->close();
+		    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
         }else{
-            echo "0 results";
-            //echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
+            echo '<script> alert("Error: Cannot connect to database"); </script>';
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
         }
     }
     $db->close();

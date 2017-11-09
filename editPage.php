@@ -54,7 +54,9 @@
         $db->close();
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     } else {
-        echo "Error: " . $sql . "<br>" . $db->error;
+          echo '<script>alert("Error: Unable to edit book");</script>';
+          $db->close();
+	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     }
 
     $db->close();

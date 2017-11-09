@@ -51,7 +51,9 @@
         $db->close();
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
     } else {
-        echo "Error: " . $sql . "<br>" . $db->error;
+	  echo '<script>alert("Error: Unable to register");</script>';
+          $db->close();
+	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
     }
 
     $db->close();

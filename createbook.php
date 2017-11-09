@@ -54,7 +54,9 @@
         $db->close();
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     } else {
-        echo "Error: " . $sql . "<br>" . $db->error;
+          echo '<script>alert("Error: Unable to create book");</scipt>';
+          $db->close();
+	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=createbook.php">';
     }
 
     $db->close();
