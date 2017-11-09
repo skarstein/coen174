@@ -103,7 +103,7 @@ $username = 'shu';
 $password = 'group2';
 $dbname = 'sdb_shu';
 
-$connection = new mysqli($servername, $username, $password, $dbname);
+$connection = mysqli_connect($servername, $username, $password, $dbname);
 $sql = "SELECT * FROM books";
 $result = $connection->query($sql);
 ?>
@@ -128,7 +128,7 @@ $result = $connection->query($sql);
  while($row=$result->fetch_assoc()){
    echo
      "<tr>
-       <td>".$row['title']."</td>
+       <td>"$connection->real_escape_string(.$row['title'].)"</td>
        <td>".$row['author_f']."</td>
        <td>".$row['author_l']."</td>
        <td>".$row['copyright']."</td>
