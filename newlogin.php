@@ -22,9 +22,9 @@
             die("Connection failed: " . $db->connect_error);
         }
 
-        $username = $_POST["uname"];
-        $password = $_POST["pswd"];
-        
+        $username = $db->real_escape_string($_POST["uname"]);
+        $password = $dp->real_escape_string($_POST["pswd"]);
+
         $sql = "SELECT username, password, salt FROM users WHERE username ="."'".$username."';";
         $result = $db->query($sql);
         if($result->num_rows == 1) {
