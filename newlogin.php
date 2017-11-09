@@ -15,7 +15,7 @@
         $database = "sdb_shu";
 
         // Create connection
-        $db = new mysqli($servername, $username, $password, $database);
+        $db = mysqli_connect($servername, $username, $password, $database);
 
         // Check connection
         if ($db->connect_error) {
