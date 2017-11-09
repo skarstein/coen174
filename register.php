@@ -20,7 +20,7 @@
     $firstname = $db->real_escape_string($_POST["fname"]);
     $lastname = $dp->real_escape_string($_POST["lname"]);
     $username = $db->real_escape_string($_POST["uname"]);
-    $password = $db->real_escape_string$_POST["pswd"]);
+    $password = $db->real_escape_string($_POST["pswd"]);
     $type = $_POST["clientid"];
 
    // echo($firstname);
