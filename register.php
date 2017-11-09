@@ -45,5 +45,8 @@
     	}
 
     	$db->close();
-    	}
+    } else {
+	echo'<script>alert("Failed to register.");</scipt>';
+	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
+    }
 ?>
