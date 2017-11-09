@@ -17,10 +17,10 @@
     }
     //echo "Connected successfully (".$db->host_info.")";
 
-    $firstname = $_POST["fname"];
-    $lastname = $_POST["lname"];
-    $username = $_POST["uname"];
-    $password = $_POST["pswd"];
+    $firstname = $db->real_escape_string($_POST["fname"]);
+    $lastname = $dp->real_escape_string($_POST["lname"]);
+    $username = $db->real_escape_string($_POST["uname"]);
+    $password = $db->real_escape_string$_POST["pswd"]);
     $type = $_POST["clientid"];
 
    // echo($firstname);

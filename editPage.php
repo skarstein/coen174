@@ -17,16 +17,16 @@
     }
     //echo "Connected successfully (".$db->host_info.")";
 
-    $booktitle = $_POST["title"];
-    $authorfirstname = $_POST["author_f"];
-    $authorlastname = $_POST["author_l"];
-    $copyrightdate = $_POST["copyright"];
-    $lexilelevel = $_POST["lexile"];
-    $numberofpages = $_POST["pages"];
-    $boolrecommended = $_POST["recommended"];
-    $booktopic = $_POST["topic"];
-    $bookpprotag_n = $_POST["pprotag_n"];
-    $booksprotag_n = $_POST["sprotag_n"];
+    $booktitle = $db->real_escape_string($_POST["title"]);
+    $authorfirstname = $db->real_escape_string($_POST["author_f"]);
+    $authorlastname = $db->real_escape_string($_POST["author_l"]);
+    $copyrightdate = $db->real_escape_string($_POST["copyright"]);
+    $lexilelevel = $db->real_escape_string($_POST["lexile"]);
+    $numberofpages = $db->real_escape_string($_POST["pages"]);
+    $boolrecommended = $db->real_escape_string($_POST["recommended"]);
+    $booktopic = $db->real_escape_string($_POST["topic"]);
+    $bookpprotag_n = $db->real_escape_string($_POST["pprotag_n"]);
+    $booksprotag_n = $db->real_escape_string($_POST["sprotag_n"]);
 
     //echo($booktitle);
     //echo($authorfirstname);
