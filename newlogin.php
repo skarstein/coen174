@@ -23,7 +23,7 @@
         }
 
         $username = $db->real_escape_string($_POST["uname"]);
-        $password = $dp->real_escape_string($_POST["pswd"]);
+        $password = $db->real_escape_string($_POST["pswd"]);
 
         $sql = "SELECT username, password, salt FROM users WHERE username ="."'".$username."';";
         $result = $db->query($sql);
