@@ -51,11 +51,9 @@
 
     if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully added a book");</script>';
-        $db->close();
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     } else {
           echo '<script>alert("Error: Unable to create book");</scipt>';
-          $db->close();
 	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=createbook.php">';
     }
 

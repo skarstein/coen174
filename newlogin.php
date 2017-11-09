@@ -39,11 +39,10 @@
                    $_SESSION['users'] = $username;
                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
                    echo '<script> alert("Hello '.$row["username"].'! You are now signed in!"); </script>';
-                   $db->close();
-                }
+                  }
                 else{
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
-                    $db->close();
+               
 		    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
         }else{
