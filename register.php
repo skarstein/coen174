@@ -6,7 +6,7 @@
     if(isset($_POST["fname"])
 	    && isset($_POST["lname"])
 	    && isset($_POST["uname"])
-	    && isset($_SESSION["pswd"]) {
+	    && isset($_SESSION["pswd"])) {
 
     	$servername = "dbserver.engr.scu.edu";
     	$username = "shu";
