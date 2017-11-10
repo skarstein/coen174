@@ -129,15 +129,15 @@ $result = $connection->query($sql);
    echo
      "<tr>
        <td>".htmlspecialchars($row['title'])."</td>
-       <td>".$row['author_f']."</td>
-       <td>".$row['author_l']."</td>
-       <td>".$row['copyright']."</td>
-       <td>".$row['lexile']."</td>
-       <td>".$row['pages']."</td>
-       <td>".$row['recommended']."</td>
-       <td>".$row['topic']."</td>
-       <td>".$row['pprotag_n']."</td>
-       <td>".$row['sprotag_n']."</td>
+       <td>".htmlspecialchars($row['author_f'])."</td>
+       <td>".htmlspecialchars($row['author_l'])."</td>
+       <td>".htmlspecialchars($row['copyright'])."</td>
+       <td>".htmlspecialchars($row['lexile'])."</td>
+       <td>".htmlspecialchars($row['pages'])."</td>
+       <td>".htmlspecialchars($row['recommended'])."</td>
+       <td>".htmlspecialchars($row['topic'])."</td>
+       <td>".htmlspecialchars($row['pprotag_n'])."</td>
+       <td>".htmlspecialchars($row['sprotag_n'])."</td>
        <td><a href=\"editPage.html\"><button>edit</button></a></td>
        <td><button>delete</button></td>
       </tr>";
