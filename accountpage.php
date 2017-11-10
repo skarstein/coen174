@@ -128,7 +128,7 @@ $result = $connection->query($sql);
  while($row=$result->fetch_assoc()){
    echo
      "<tr>
-       <td>"$connection->real_escape_string(.$row['title'].)"</td>
+       <td>".htmlspecialchars($row['title'])."</td>
        <td>".$row['author_f']."</td>
        <td>".$row['author_l']."</td>
        <td>".$row['copyright']."</td>
