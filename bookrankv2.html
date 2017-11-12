@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <!--<link rel="stylesheet" type="text/css" href="registration.css"/>-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="bookrank.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <title>Rank Book</title>
+  <h1>Book Matching Recommendation System</h1>
+  <h2>Rank Book</h2>
+
+  <div class="block">
+  <form action = "rankbook.php" method = "post">
+
+  <ul id="items" class="block_list block_list_words">
+    <li>Lexile Level</li>
+    <li>Copyright Date</li>
+    <li>Page Count</li>
+    <li>Recommended</li>
+    <li>Topic</li>
+    <li>Primary Protagonist Nature</li>
+    <li>Secondary Protagonist Nature</li>
+  </ul>
+  </form>
+  </div>
+
+  <script src="node_modules/sortablejs/Sortable.js"></script></script>
+  <script src="bookrank.js"></script>
+</body>
+
+</HTML>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <!--<link rel="stylesheet" type="text/css" href="registration.css"/>-->
+  <link href=<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+
+<body>
+  <title>Rank Book</title>
+  <h1>Book Matching Recommendation System</h1>
+  <h2>Rank Book</h2>
+
+  <form action = "rankbook.php" method = "post">
+ 
+  <select name = "llranking">
+    <option value = "1"> 1 </option>
+    <option value = "2"> 2 </option>
+    <option value = "3"> 3 </option>
+    <option value = "4"> 4 </option>
+    <option value = "5"> 5 </option>
+    <option value = "6"> 6 </option>
+    <option value = "7"> 7 </option>
+  </select>
+
+  <button> Lexile Reading level </button>
+  <select name = "lexilelevel">
+    <option name = "a"> 100 </option>
+    <option name = "b"> 200 </option>
+    <option name = "c"> 300 </option>
+    <option name = "d"> 400 </option>
+    <option name = "e"> 500 </option>
+    <option name = "f"> 600 </option>
+    <option name = "g"> 700 </option>
+    <option name "veryhard"> >700 </option>
+  </select>
+  <br>
+ 
+    <select name = "copyrightranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Copyright Date </button>
+    <select name = "copyrightdate">
+      <option name = "h"> 1980-1989 </option>
+      <option name = "i"> 1990-1999 </option>
+      <option name = "j"> 2000-2009 </option>
+      <option name = "k"> 2010> </option>
+    </select>
+  <br>
+
+    <select name = "pagenumranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Number of Pages </button>
+    <select name = "copyrightdate">
+      <option name = "h"> less than 100 </option>
+      <option name = "i"> 100-500 </option>
+      <option name = "j"> more than 500 </option>
+    </select>
+  <br>
+
+    <select name = "recranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Recommended </button>
+    <select name = "recommendedornah">
+      <option name = "k"> yes </option>
+      <option name = "l"> no </option>
+    </select>
+  <br>
+    <select name = "topicranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Topic </button>
+    <select name = "topic">
+      <option name = "m"> populate with the database topics </option>
+    </select>
+  <br>
+
+    <select name = "primaryprotagranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Primary Protagonist Nature </button>
+    <select name = "primary protag nature">
+      <option name = "n"> populate with the database protagonist natures </option>
+    </select>
+  <br>
+
+    <select name = "secondaryprotagranking">
+      <option value = "1"> 1 </option>
+      <option value = "2"> 2 </option>
+      <option value = "3"> 3 </option>
+      <option value = "4"> 4 </option>
+      <option value = "5"> 5 </option>
+      <option value = "6"> 6 </option>
+      <option value = "7"> 7 </option>
+    </select>
+    <button> Secondary Protagonist Nature </button>
+    <select name = "secondary protag nature">
+      <option name = "n"> populate with the database secondary protagonist natures </option>
+    </select>
+  <br>
+  
+</body>
+
+</HTML>
