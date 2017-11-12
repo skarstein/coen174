@@ -14,13 +14,13 @@
   <div class="title">Rank Preferences</div>
 
   <ul id="items" class="block_list block_list_words">
-    <li><button id="ll">Lexile Level</button></li>
-    <li><button>Copyright Date</button></li>
-    <li><button>Page Count</button></li>
-    <li><button>Recommended</button></li>
-    <li><button>Topic</button></li>
-    <li><button>Primary Protagonist Nature</button></li>
-    <li><button>Secondary Protagonist Nature</button></li>
+    <li><button onclick="showLL()">Lexile Level</button></li>
+    <li><button onclick="showCD()">Copyright Date</button></li>
+    <li><button onclick="showPC()">Page Count</button></li>
+    <li><button onclick="showR()">Recommended</button></li>
+    <li><button onclick="showT()">Topic</button></li>
+    <li><button onclick="showPN()">Primary Protagonist Nature</button></li>
+    <li><button onclick="showSN()">Secondary Protagonist Nature</button></li>
   </ul>
   <form action = "rankbook.php" method = "post">
   <button>Submit</button>
@@ -28,7 +28,14 @@
   </div>
 
   <div data-force="18" class="block" style="left: 58%; width: 40%;">
-      <div class="title">Enter Prefence</div>
+      <div class="title">Enter Preference</div>
+      <div id="llDiv" style="display:none;">TEST</div>
+      <div id="cdDiv" style="display:none;">test2</div>
+      <div id="pcDiv" style="display:none;">hello</div>
+      <div id="rDiv" style="display:none;">2test2</div>
+      <div id="tDiv" style="display:none;">toopic</div>
+      <div id="pnDiv" style="display:none;">protag</div>
+      <div id="snDiv" style="display:none;">2protag</div>
   </div>
 
   <script src="node_modules/sortablejs/Sortable.js"></script></script>
