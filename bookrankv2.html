@@ -12,10 +12,9 @@
 
   <div id="filter" class="block">
   <div class="title">Rank Preferences</div>
-  <form action = "rankbook.php" method = "post">
 
   <ul id="items" class="block_list block_list_words">
-    <li><button>Lexile Level</button></li>
+    <li><button id="ll">Lexile Level</button></li>
     <li><button>Copyright Date</button></li>
     <li><button>Page Count</button></li>
     <li><button>Recommended</button></li>
@@ -23,7 +22,13 @@
     <li><button>Primary Protagonist Nature</button></li>
     <li><button>Secondary Protagonist Nature</button></li>
   </ul>
+  <form action = "rankbook.php" method = "post">
+  <button>Submit</button>
   </form>
+  </div>
+
+  <div data-force="18" class="block" style="left: 58%; width: 40%;">
+      <div class="title">Enter Prefence</div>
   </div>
 
   <script src="node_modules/sortablejs/Sortable.js"></script></script>
