@@ -1,5 +1,30 @@
 body {
     font-family: 'Noto Sans', sans-serif;
+    background-color: #07889B;
+}
+
+.form_center {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-top: -30px;
+    margin-left: -150px;
+}
+
+.form_mate {
+  position: relative;
+  float: left;
+  min-width: 300px;
+  width: 300px;
+  min-height: 60px;
+  font-family: 'Roboto';
+  color: #777;
+  font-weight: 300;
+  background-color: #fff;
+  box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  transition: all 375ms ease-in-out;
+  text-align: center;
 }
 
 /* Full-width input fields */
@@ -14,7 +39,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: #EEAA7B;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
