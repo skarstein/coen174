@@ -84,6 +84,16 @@ table, th, td {
 
 </style>
 <body>
+<?php
+$servername = "dbserver.engr.scu.edu";
+$username = 'shu';
+$password = 'group2';
+$dbname = 'sdb_shu';
+
+$connection = mysqli_connect($servername, $username, $password, $dbname);
+$sql = "SELECT * FROM books";
+$result = $connection->query($sql);
+?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
   <div>
     Welcome!
@@ -95,18 +105,23 @@ table, th, td {
     <a href="createabook.html">Course 2</a>
     <a href="createabook.html">Course 3</a>
   </div>
+  <div id="logout">
+    <button onclick="logout();" type="button">Logout</button>
+  </div>
+  <script>
+  logout = function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+        location.reload(true);
+      }
+    };
+    xhttp.open("GET", "Logout.php");
+    xhttp.send();
+  }
+  </script>
   <a href = "createbook.html"><button> Add Books </button> </a>
 </div>
-<?php
-$servername = "dbserver.engr.scu.edu";
-$username = 'shu';
-$password = 'group2';
-$dbname = 'sdb_shu';
-
-$connection = mysqli_connect($servername, $username, $password, $dbname);
-$sql = "SELECT * FROM books";
-$result = $connection->query($sql);
-?>
 
 <table class = "table">
  <thead>
