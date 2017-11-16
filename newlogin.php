@@ -35,7 +35,7 @@
                 $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
 
                 if($hashed_password==$row["password"]){
-                   $_SESSION['users'] = $username;
+                   $_SESSION['user'] = $username;
                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
                    echo '<script> alert("Hello '.$row["username"].'! You are now signed in!"); </script>';
                    $_SESSION['loggedIn'] = True;
