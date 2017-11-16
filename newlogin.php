@@ -27,7 +27,8 @@
 
         $sql = "SELECT username, password, type, salt FROM users WHERE username ="."'".$username."';";
         $result = $db->query($sql);
-        if($result->num_rows == 1) {
+        if($result->num_rows == 1) 
+        {
                 $row = $result->fetch_assoc();
                 $options = [
                     'salt' => $row["salt"],
@@ -36,34 +37,31 @@
 
                 if($hashed_password==$row["password"])
                 {
-                   $_SESSION['users'] = $username
-                   //if(type == 0)
-                   //{
-                   //   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
-                   //}
-                   //else
-                   //{
-                   //   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.php">';
-                   //}
+                   $_SESSION['users'] = $username;
                    //if the user registered as a student
                    if($row["type"] == 0)
                    {
-                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.php">';
-                       echo '<script> alert("Hello, '.$row["username"].'! You are now signed in!"); </script>';
+                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.html">';
+                       echo '<script> alert("Hello, Student: '.$row["username"].'! You are now signed in!"); </script>';
                    }
                    //if the user registered as a teacher
-                   if($row["type"] == 1)
+                   else
                    {
+                   
                        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
-                       echo '<script> alert("Hello, '.$row["username"].'! You are now signed in!"); </script>';
+                       echo '<script> alert("Hello, Instructor: '.$row["username"].'! You are now signed in!"); </script>';
                    }
+                   
 
-                  }
-                else{
-                    echo '<script> alert("Wrong email/password. Try Again."); </script>';
-		    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
-        }else{
+                else
+                {
+                    echo '<script> alert("Wrong email/password. Try Again."); </script>';
+		            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
+                }
+        }
+        else
+        {
             echo '<script> alert("Error: Cannot connect to database"); </script>';
             echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
         }
