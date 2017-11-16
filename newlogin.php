@@ -44,7 +44,7 @@
 
                 if($hashed_password==$row["password"])
                 {
-                   $_SESSION['users'] = $username;
+                   $_SESSION['user'] = $username;
                    $_SESSION['type'] = $row["type"];
 
                    //if the user registered as a student
