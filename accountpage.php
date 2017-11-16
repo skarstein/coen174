@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <HTML>
 <head>
-<link rel="stylesheet" type="text/css" href="display.css"/>
-
+<!--<link rel="stylesheet" type="text/css" href="display.css">-->
   <title>My Account</title>
   <h1>My Account</h1>
   <script>
@@ -32,57 +31,8 @@ window.onclick = function(event) {
 }
 </script>
 </head>
-<style>
-/* Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+<style> <?php include 'display.css'; ?> </style>
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-</style>
 <body>
 <?php
 $servername = "dbserver.engr.scu.edu";
@@ -95,18 +45,22 @@ $sql = "SELECT * FROM books";
 $result = $connection->query($sql);
 ?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
-  <div>
-    Welcome <?php echo $_SESSION['user']; ?>!
+  <div id = "welcome">
+    Welcome, <?php echo $_SESSION['user']; ?>!
   </div>
-  <div class="dropdown">
+  <div class="mainbuttons">
+  <a href = "createbook.html"><button class = "dropbtn"> Add Books </button> </a>
+  <!--<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Select a Course</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="createabook.html">Course 1</a>
     <a href="createabook.html">Course 2</a>
     <a href="createabook.html">Course 3</a>
   </div>
+  -->
   <div id="logout">
-    <button onclick="logout();" type="button">Logout</button>
+    <button onclick="logout();" type="button" class="dropbtn">Logout</button>
+  </div>
   </div>
   <script>
   logout = function() {
@@ -122,8 +76,7 @@ $result = $connection->query($sql);
 
   }
   </script>
-  <a href = "createbook.html"><button> Add Books </button> </a>
-</div>
+  </div>
 
 <table class = "table">
  <thead>
@@ -138,6 +91,7 @@ $result = $connection->query($sql);
      <th>Topic</th>
      <th>Protagonist Nature</th>
      <th>Secondary Protagonist Nature</th>
+     <td colspan = "2" id = "modify">Modify </td>
    </tr>
  </thead>
  <tbody>
@@ -155,8 +109,8 @@ $result = $connection->query($sql);
        <td>".htmlspecialchars($row['topic'])."</td>
        <td>".htmlspecialchars($row['pprotag_n'])."</td>
        <td>".htmlspecialchars($row['sprotag_n'])."</td>
-       <td><a href=\"editPage.html\"><button>edit</button></a></td>
-       <td><button>delete</button></td>
+       <td><a href=\"editPage.html\"><button style='background: green;'>edit</button></a></td>
+       <td><button style='background: red;'>delete</button></td>
       </tr>";
 }
 
