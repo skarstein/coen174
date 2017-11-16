@@ -1,9 +1,16 @@
 <?php
     session_start();
     if(isset($_SESSION['user'])){
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
-        echo '<script>alert("You are already signed in.");</script>';
-
+        if ($_SESSION['type'] == 0)
+        {
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.html">';
+            echo '<script>alert("You are already signed in.");</script>';
+        }
+        else
+        {
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+            echo '<script>alert("You are already signed in.");</script>';
+         }
     } else{
         // A simple PHP script demonstrating how to connect to MySQL.
         // Press the 'Run' button on the top to start the web server,
@@ -31,13 +38,15 @@
         {
                 $row = $result->fetch_assoc();
                 $options = [
-                    'salt' => $row["salt"],
+                   'salt' => $row["salt"],
                 ];
                 $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
 
                 if($hashed_password==$row["password"])
                 {
                    $_SESSION['users'] = $username;
+                   $_SESSION['type'] = $row["type"];
+
                    //if the user registered as a student
                    if($row["type"] == 0)
                    {
@@ -56,6 +65,7 @@
                 }
                 else
                 {
+
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
 		            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
@@ -63,7 +73,7 @@
         else
         {
             echo '<script> alert("Error: Cannot connect to database"); </script>';
-            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
         }
     }
     $db->close();
