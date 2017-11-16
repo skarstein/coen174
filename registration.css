@@ -186,3 +186,7 @@ span.psw {
        width: 100%;
     }
 }
+
+b, p {
+    font-family: Noto Sans;
+}
