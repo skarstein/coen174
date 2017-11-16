@@ -113,12 +113,13 @@ $result = $connection->query($sql);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        window.location = "homepage.html";
-        location.reload(true);
+              location.reload(true);
       }
     };
     xhttp.open("GET", "logout.php");
     xhttp.send();
+   // window.location = "homepage.html";
+
   }
   </script>
   <a href = "createbook.html"><button> Add Books </button> </a>

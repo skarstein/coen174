@@ -46,6 +46,7 @@
                 {
                    $_SESSION['user'] = $username;
                    $_SESSION['type'] = $row["type"];
+                   $_SESSION['loggedIn'] = True;
 
                    //if the user registered as a student
                    if($row["type"] == 0)
