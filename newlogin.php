@@ -1,9 +1,16 @@
 <?php
     session_start();
     if(isset($_SESSION['user'])){
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=home.html">';
-        echo '<script>alert("You are already signed in.");</script>';
-
+        if ($_SESSION['type'] == 0)
+        {
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.html">';
+            echo '<script>alert("You are already signed in.");</script>';
+        }
+        else
+        {
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+            echo '<script>alert("You are already signed in.");</script>';
+         }
     } else{
         // A simple PHP script demonstrating how to connect to MySQL.
         // Press the 'Run' button on the top to start the web server,
@@ -36,6 +43,8 @@
 
                 if($hashed_password==$row["password"]){
                    $_SESSION['user'] = $username;
+                   $_SESSION['type'] = $row["type"];
+
                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
                    echo '<script> alert("Hello '.$row["username"].'! You are now signed in!"); </script>';
                    $_SESSION['loggedIn'] = True;
