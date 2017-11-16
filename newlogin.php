@@ -25,7 +25,7 @@
         $username = $db->real_escape_string($_POST["uname"]);
         $password = $db->real_escape_string($_POST["pswd"]);
 
-        $sql = "SELECT username, password, salt FROM users WHERE username ="."'".$username."';";
+        $sql = "SELECT username, password, type, salt FROM users WHERE username ="."'".$username."';";
         $result = $db->query($sql);
         if($result->num_rows == 1) {
                 $row = $result->fetch_assoc();
@@ -34,10 +34,30 @@
                 ];
                 $hashed_password = password_hash("$password", PASSWORD_BCRYPT, $options);
 
-                if($hashed_password==$row["password"]){
-                   $_SESSION['users'] = $username;
-                   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
-                   echo '<script> alert("Hello '.$row["username"].'! You are now signed in!"); </script>';
+                if($hashed_password==$row["password"])
+                {
+                   $_SESSION['users'] = $username
+                   //if(type == 0)
+                   //{
+                   //   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+                   //}
+                   //else
+                   //{
+                   //   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.php">';
+                   //}
+                   //if the user registered as a student
+                   if($row["type"] == 0)
+                   {
+                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.php">';
+                       echo '<script> alert("Hello, '.$row["username"].'! You are now signed in!"); </script>';
+                   }
+                   //if the user registered as a teacher
+                   if($row["type"] == 1)
+                   {
+                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+                       echo '<script> alert("Hello, '.$row["username"].'! You are now signed in!"); </script>';
+                   }
+
                   }
                 else{
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
