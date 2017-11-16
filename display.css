@@ -42,6 +42,7 @@ td {
 
 table, th, td {
     border: 1px solid black;
+    background-color: white;
 }
 
 /* Change color of dropdown links on hover */
@@ -50,19 +51,19 @@ table, th, td {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-#editbutton {background-color: green;}
+#editbutton {background-color: red;}
 
-#deletebutton {background-color: red;}
+#deletebutton {background-color: yellow;}
 
 .mainbuttons 
 {
     background-color: #4CAF50;
-    position: absolute;
-    left: 50%;
-    top: 40%;
     color: white;
     display: inline-block;
     text-align: center;
+    position: relative;
+    height: auto;
+    
 }
 
 #modify

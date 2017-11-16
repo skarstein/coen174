@@ -46,7 +46,7 @@ $result = $connection->query($sql);
 ?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
   <div id = "welcome">
-    Welcome, <?php echo $_SESSION['user']; ?>!
+    Welcome, <?php echo $_SESSION['user']; ?>
   </div>
   <div class="mainbuttons">
   <a href = "createbook.html"><button class = "dropbtn"> Add Books </button> </a>
@@ -109,8 +109,8 @@ $result = $connection->query($sql);
        <td>".htmlspecialchars($row['topic'])."</td>
        <td>".htmlspecialchars($row['pprotag_n'])."</td>
        <td>".htmlspecialchars($row['sprotag_n'])."</td>
-       <td><a href=\"editPage.html\"><button style='background: green;'>edit</button></a></td>
-       <td><button style='background: red;'>delete</button></td>
+       <td><a href=\"editPage.html\"><button id='editbutton'>edit</button></a></td>
+       <td><button id='deletebutton'>delete</button></td>
       </tr>";
 }
 
