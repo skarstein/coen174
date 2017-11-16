@@ -96,7 +96,7 @@ $result = $connection->query($sql);
 ?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
   <div>
-    Welcome!
+    Welcome <?php echo $_SESSION['user']; ?>!
   </div>
   <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Select a Course</button>

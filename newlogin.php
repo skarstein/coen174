@@ -38,6 +38,7 @@
                    $_SESSION['users'] = $username;
                    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
                    echo '<script> alert("Hello '.$row["username"].'! You are now signed in!"); </script>';
+                   $_SESSION['loggedIn'] = True;
                   }
                 else{
                     echo '<script> alert("Wrong email/password. Try Again."); </script>';
