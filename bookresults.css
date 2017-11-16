@@ -77,3 +77,17 @@ transition: all .3s ease-out;
 left: -.5em;
 border-left-color: #fa8072;				
 }
+
+button {
+     line-height: 22px;
+     width: 58px;
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 40px;
+     margin-right: 60px;
+     position:absolute;
+     top:0;
+     right:0;
+     border:none;
+     cursor: pointer;
+ }
