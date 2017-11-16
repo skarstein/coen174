@@ -113,7 +113,7 @@ $result = $connection->query($sql);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-        window.location = homepage.html;
+        window.location = "homepage.html";
         location.reload(true);
       }
     };
