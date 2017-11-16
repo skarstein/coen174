@@ -116,7 +116,7 @@ $result = $connection->query($sql);
         location.reload(true);
       }
     };
-    xhttp.open("GET", "Logout.php");
+    xhttp.open("GET", "logout.php");
     xhttp.send();
   }
   </script>
