@@ -44,7 +44,7 @@
 
                 if($hashed_password==$row["password"])
                 {
-                   $_SESSION['user'] = $username;
+                   //$_SESSION['user'] = $username;
                    $_SESSION['type'] = $row["type"];
                    $_SESSION['loggedIn'] = True;
 

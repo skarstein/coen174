@@ -46,7 +46,7 @@ $result = $connection->query($sql);
 ?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
   <div id = "welcome">
-    Welcome, <?php echo $_SESSION['user']; ?>
+<!--    Welcome, -->
   </div>
   <div class="mainbuttons">
   <a href = "createbook.html"><button class = "dropbtn"> Add Books </button> </a>
