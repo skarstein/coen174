@@ -1,3 +1,3 @@
-function logOut() {
+function logout() {
   window.location.href = 'login.html';
 }
