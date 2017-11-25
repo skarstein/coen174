@@ -72,8 +72,7 @@ $result = $connection->query($sql);
     };
     xhttp.open("GET", "logout.php");
     xhttp.send();
-   // window.location = "homepage.html";
-
+    window.location.href = "homepage.html";
   }
   </script>
   </div>
