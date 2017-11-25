@@ -54,11 +54,17 @@ table, th, td {
 #editbutton {
     background-color: #F88017;
     color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #deletebutton {
     background-color: #C11B17;
     color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .mainbuttons 
