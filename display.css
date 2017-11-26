@@ -74,7 +74,7 @@ body {
 
 $breakpoint-alpha: 480px; 
 
-.rwd-table {
+.table-rwd {
   margin: 1em 0;
   min-width: 300px; 
   
@@ -131,7 +131,7 @@ $breakpoint-alpha: 480px;
   
 }
 
-.rwd-table {
+.table-rwd {
   background: #34495E;
   color: #fff;
   border-radius: .4em;
