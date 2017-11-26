@@ -80,8 +80,7 @@ $result = $connection->query($sql);
  <thead>
    <tr>
      <th>Title</th>
-     <th>Author First Name</th>
-     <th>Author Last Name</th>
+     <th>Author</th>
      <th>Copyright</th>
      <th>Lexile</th>
      <th>Pages</th>
@@ -98,8 +97,7 @@ $result = $connection->query($sql);
    echo
      "<tr>
        <td>".htmlspecialchars($row['title'])."</td>
-       <td>".htmlspecialchars($row['author_f'])."</td>
-       <td>".htmlspecialchars($row['author_l'])."</td>
+       <td>".htmlspecialchars($row['author'])."</td>
        <td>".htmlspecialchars($row['copyright'])."</td>
        <td>".htmlspecialchars($row['lexile'])."</td>
        <td>".htmlspecialchars($row['pages'])."</td>
