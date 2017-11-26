@@ -31,6 +31,10 @@ h1, h2 {
   text-align: center;
 }
 
+fieldset {
+    border: none;
+}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
