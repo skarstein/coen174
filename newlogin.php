@@ -32,7 +32,7 @@
         $username = $db->real_escape_string($_POST["uname"]);
         $password = $db->real_escape_string($_POST["pswd"]);
 
-        $sql = "SELECT username, password, type, salt FROM users WHERE username ="."'".$username."';";
+        $sql = "SELECT id, username, password, type, salt FROM users WHERE username ="."'".$username."';";
         $result = $db->query($sql);
         if($result->num_rows == 1) 
         {
@@ -45,9 +45,9 @@
                 if($hashed_password==$row["password"])
                 {
                    //$_SESSION['user'] = $username;
+                   $_SESSION['user_id'] = $row["id"];
                    $_SESSION['type'] = $row["type"];
                    $_SESSION['loggedIn'] = True;
-                   $_SESSION['user_id'] = $row["id"];
 
                    //if the user registered as a student
                    if($row["type"] == 0)
