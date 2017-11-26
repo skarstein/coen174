@@ -62,19 +62,6 @@ $result = $connection->query($sql);
   <div id="logout">
     <button onclick="logout();" type="button" class="logout-btn">Logout</button>
   </div>
-  <script>
-  logout = function() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-              location.reload(true);
-      }
-    };
-    xhttp.open("GET", "logout.php");
-    xhttp.send();
-    window.location.href = "homepage.html";
-  }
-  </script>
 
 <table class = "table-rwd">
  <thead>
