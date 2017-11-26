@@ -3,10 +3,14 @@ body {
     background-color: #fff;
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 .form_center {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 30%;
     margin-top: -30px;
     margin-left: -150px;
 }
