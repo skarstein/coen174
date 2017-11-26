@@ -59,7 +59,7 @@ $result = $connection->query($sql);
   </div>
   -->
   <div id="logout">
-    <button onclick="logout();" type="button" class="dropbtn">Logout</button>
+    <button onclick="logout();" type="button" class="logout-btn">Logout</button>
   </div>
   </div>
   <script>
