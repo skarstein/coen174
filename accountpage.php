@@ -90,7 +90,7 @@ $result = $connection->query($sql);
      <th>Topic</th>
      <th>Protagonist Nature</th>
      <th>Secondary Protagonist Nature</th>
-     <td colspan = "2" id = "modify">Modify </td>
+     <td colspan = "2">Modify </td>
    </tr>
  </thead>
  <tbody>
