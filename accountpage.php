@@ -41,7 +41,7 @@ $password = 'group2';
 $dbname = 'sdb_shu';
 
 $connection = mysqli_connect($servername, $username, $password, $dbname);
-$sql = "SELECT * FROM books";
+$sql = "SELECT * FROM books WHERE user_id ="."'".$_SESSION['user_id']."';";
 $result = $connection->query($sql);
 ?>
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
