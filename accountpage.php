@@ -77,7 +77,7 @@ $result = $connection->query($sql);
   </script>
   </div>
 
-<table class = "table">
+<table class = "table-rwd">
  <thead>
    <tr>
      <th>Title</th>
