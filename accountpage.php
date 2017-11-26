@@ -48,8 +48,9 @@ $result = $connection->query($sql);
   <div id = "welcome">
 <!--    Welcome, -->
   </div>
-  <div class="mainbuttons">
+  <div class="add">
   <a href = "createbook.html"><button class = "dropbtn"> Add Books </button> </a>
+  </div>
   <!--<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Select a Course</button>
   <div id="myDropdown" class="dropdown-content">
@@ -60,7 +61,6 @@ $result = $connection->query($sql);
   -->
   <div id="logout">
     <button onclick="logout();" type="button" class="logout-btn">Logout</button>
-  </div>
   </div>
   <script>
   logout = function() {
@@ -75,7 +75,6 @@ $result = $connection->query($sql);
     window.location.href = "homepage.html";
   }
   </script>
-  </div>
 
 <table class = "table-rwd">
  <thead>
