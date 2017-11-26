@@ -102,5 +102,6 @@ $connection->close();
 ?>
 </tbody>
 </table>
+<script src="logout.js"></script>
 </body>
 </HTML>
