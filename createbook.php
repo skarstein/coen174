@@ -3,6 +3,7 @@
     // Press the 'Run' button on the top to start the web server,
     // then click the URL that is emitted to the Output tab of the console.
 
+    session_start();
     $servername = "dbserver.engr.scu.edu";
     $username = "shu";
     $password = "group2";
