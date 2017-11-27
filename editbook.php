@@ -30,10 +30,10 @@
     $sql = "UPDATE  books SET title = '" .$booktitle. "', author = '" .$authorname. "', copyright = '" .$copyrightdate."', lexile = '".$lexilelevel."', pages = '".$numberofpages."', recommended = '".$boolrecommended."', topic = '".$booktopic."', pprotag_n = '".$bookpprotag_n."', sprotag_n = '".$booksprotag_n."' WHERE id = '".$_SESSION['bookid']."'";
 
     if ($db->query($sql) === TRUE) {
-        echo '<script>alert("You have successfully added a book");</script>';
+        echo '<script>alert("You have successfully edited the book");</script>';
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     } else {
-          echo '<script>alert("Error: Unable to create book");</scipt>';
+          echo '<script>alert("Error: Unable to edit book");</scipt>';
 	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=createbook.php">';
     }
 
