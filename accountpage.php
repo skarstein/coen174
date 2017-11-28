@@ -41,7 +41,7 @@ $password = 'group2';
 $dbname = 'sdb_shu';
 
 $connection = mysqli_connect($servername, $username, $password, $dbname);
-if (is_null($_SESSION['course'])) {
+if (isset($_GET['course'])) {
   $_SESSION['course'] = $_GET['course'];
 }
 $sql = "SELECT * FROM books WHERE user_id ='".$_SESSION['user_id']."' AND course_id='".$_SESSION['course']."';";
