@@ -33,7 +33,7 @@
         echo '<script>alert("You have successfully edited the book");</script>';
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
     } else {
-          echo '<script>alert("Error: Unable to edit book");</scipt>';
+          echo '<script>alert("Error: Unable to edit book");</script>';
 	  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=createbook.php">';
     }
 

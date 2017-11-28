@@ -93,7 +93,7 @@ $result = $connection->query($sql);
        <td>".htmlspecialchars($row['pprotag_n'])."</td>
        <td>".htmlspecialchars($row['sprotag_n'])."</td>
        <td><button id='editbutton' onclick=\"editFunction('".htmlspecialchars($row['title'])."')\">edit</button></a></td>
-       <td><button id='deletebutton'>delete</button></td>
+       <td><button id='deletebutton' onclick=\"deleteFunction('".htmlspecialchars($row['title'])."')\">delete</button></td>
       </tr>";
 }
 
@@ -103,6 +103,11 @@ $connection->close();
 <script>
     editFunction = function(title) {
         window.location = "editPage.php?title=" + title;
+    }
+</script>
+<script>
+    deleteFunction = function(title) {
+        window.location = "delete.php?title=" + title;
     }
 </script>
 </tbody>
