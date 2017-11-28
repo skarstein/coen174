@@ -33,7 +33,12 @@
 
 	if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully created an account");</script>';
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
+        if ($type == 1) {
+        	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.php">';
+        }
+        else {
+        	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentsetup.php">';
+        }
 	} else {
           echo '<script>alert("Error: Unable to register");</script>';
           echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
