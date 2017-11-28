@@ -14,14 +14,14 @@
         die("Connection failed: " . $db->connect_error);
     }
 
-   $sql = "DELETE FROM books WHERE title = '".$_GET['title']."';";
+   $sql = "DELETE FROM courses WHERE course_id = '".$_GET['course']."';";
 
    if ($db->query($sql) === TRUE) {
-       echo '<script>alert("You have successfully deleted the book");</script>';
-       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+       echo '<script>alert("You have successfully deleted the course");</script>';
+       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teacheraccountpage.php">';
    } else {
-        echo '<script>alert("Error: Unable to delete book");</script>';
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+        echo '<script>alert("Error: Unable to delete course");</script>';
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teacheraccountpage.php">';
     }
 
     $db->close();
