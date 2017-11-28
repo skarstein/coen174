@@ -95,7 +95,7 @@ $connection->close();
 ?>
 <script>
     selectFunction = function(course) {
-        window.location = "accountpage.php?course=" + course;
+        window.location = "coursebooks.php?course=" + course;
     }
 </script>
 <script>
