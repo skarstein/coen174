@@ -47,9 +47,18 @@ $result = $connection->query($sql);
   <!--<button type="button" onclick="location.href='createabook.html'"> Select a course </button> -->
   <div id = "welcome">
 <!--    Welcome, -->
+  <div class="form_center">
+  <div class="form_mate">
+  <form action = "addcourse.php" method = "post">
+  <fieldset>
+      <br><b>Course ID</b><br>
+      <input type="text" name="course_id" required>
+      <br><b>Course Name</b><br>
+      <input type="text" name="name" required>
+      <button type="submit">Add Course</button>
+  </fieldset>
+  </form>
   </div>
-  <div class="add">
-  <a href = "createbook.html"><button class = "dropbtn"> Add Courses </button> </a>
   </div>
   <!--<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Select a Course</button>
