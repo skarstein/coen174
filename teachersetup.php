@@ -17,6 +17,20 @@
   $course_id = $db->real_escape_string($_POST["course_id"]);
 
   $sql = "INSERT INTO courses(course_id, user_id) VALUES ('".$course_id."', '".$_SESSION['user_id']."')";
+  if ($db->query($sql) === TRUE) {
+        echo '<script>alert("You have successfully created an account");</script>';
+        if ($type == 1) {
+          echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.php">';
+        }
+        else {
+          echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentsetup.php">';
+        }
+  } else {
+          echo '<script>alert("Error: Unable to register");</script>';
+          echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
+  }
+
+  $db->close();
   ?>
 
 <!DOCTYPE html>
