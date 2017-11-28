@@ -58,7 +58,7 @@
                    //if the user registered as a teacher
                    else
                    {
-                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
+                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teacheraccountpage.php">';
                        echo '<script> alert("Hello, Instructor: '.$row["username"].'! You are now signed in!"); </script>';
                    }
                 }
