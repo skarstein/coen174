@@ -52,7 +52,7 @@
                    //if the user registered as a student
                    if($row["type"] == 0)
                    {
-                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.html">';
+                       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentaccountpage.php">';
                        echo '<script> alert("Hello, Student: '.$row["username"].'! You are now signed in!"); </script>';
                    }
                    //if the user registered as a teacher
