@@ -65,6 +65,9 @@ $result = $connection->query($sql);
   <div id="logout">
     <button onclick="logout();" type="button" class="logout-btn">Logout</button>
   </div>
+  <div id="logout">
+    <a href="teacheraccountpage.php"><button type="button" class="logout-btn">Back</button></a>
+  </div>
 
 <table class = "table-rwd">
  <thead>
