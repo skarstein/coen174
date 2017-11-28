@@ -65,7 +65,7 @@ $result = $connection->query($sql);
     <button onclick="logout();" type="button" class="logout-btn">Logout</button>
     <a href="teacheraccountpage.php"><button type="button" class="back-btn">Back</button></a>
 
-<table class = "table-rwd">
+<table class = "table-rwd" id="books">
  <thead>
    <tr>
      <th>Title</th>
@@ -77,7 +77,7 @@ $result = $connection->query($sql);
      <th>Topic</th>
      <th>Protagonist Nature</th>
      <th>Secondary Protagonist Nature</th>
-     <td colspan = "2">Modify </td>
+     <td align="center" colspan = "2">Modify </td>
    </tr>
  </thead>
  <tbody>

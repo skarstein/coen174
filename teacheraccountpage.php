@@ -55,7 +55,7 @@ $result = $connection->query($sql);
       <input type="text" name="course_id" required>
       <br><b>Course Name</b><br>
       <input type="text" name="name" required>
-      <button type="submit">Add Course</button>
+      <button class = "course-button" type="submit">Add Course</button>
   </fieldset>
   </form>
   </div>
