@@ -62,12 +62,8 @@ $result = $connection->query($sql);
     <a href="createabook.html">Course 3</a>
   </div>
   -->
-  <div id="logout">
     <button onclick="logout();" type="button" class="logout-btn">Logout</button>
-  </div>
-  <div id="logout">
-    <a href="teacheraccountpage.php"><button type="button" class="logout-btn">Back</button></a>
-  </div>
+    <a href="teacheraccountpage.php"><button type="button" class="back-btn">Back</button></a>
 
 <table class = "table-rwd">
  <thead>
