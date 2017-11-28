@@ -34,7 +34,7 @@
 	if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully created an account");</script>';
         if ($type == 1) {
-        	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.php">';
+        	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.html">';
         }
         else {
         	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=studentsetup.php">';

@@ -22,7 +22,7 @@
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=accountpage.php">';
   } else {
           echo '<script>alert("Error: Unable to create course");</script>';
-          echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.php">';
+          echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.html">';
   }
   $db->close();
 ?>
