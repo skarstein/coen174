@@ -85,15 +85,15 @@ $result = $connection->query($sql);
  while($row=$result->fetch_assoc()){
    echo
      "<tr>
-       <td>".htmlspecialchars($row['title'])."</td>
-       <td>".htmlspecialchars($row['author'])."</td>
-       <td>".htmlspecialchars($row['copyright'])."</td>
-       <td>".htmlspecialchars($row['lexile'])."</td>
-       <td>".htmlspecialchars($row['pages'])."</td>
-       <td>".htmlspecialchars($row['recommended'])."</td>
-       <td>".htmlspecialchars($row['topic'])."</td>
-       <td>".htmlspecialchars($row['pprotag_n'])."</td>
-       <td>".htmlspecialchars($row['sprotag_n'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['title'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['author'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['copyright'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['lexile'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['pages'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['recommended'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['topic'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['pprotag_n'])."</td>
+       <td align=\"center\">".htmlspecialchars($row['sprotag_n'])."</td>
        <td><button id='editbutton' onclick=\"editFunction('".htmlspecialchars($row['title'])."')\">edit</button></a></td>
        <td><button id='deletebutton' onclick=\"deleteFunction('".htmlspecialchars($row['title'])."')\">delete</button></td>
       </tr>";
