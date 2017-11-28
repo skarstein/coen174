@@ -32,7 +32,10 @@
 	$sql = "INSERT INTO users(firstname, lastname, username, password, type, salt) VALUES ('" .$firstname. "', '" .$lastname. "','" .$username. "','" .$hashed_password."','".$type."','".$salt."')";
 
 	if ($db->query($sql) === TRUE) {
-		$_SESSION['user_id'] = "SELECT id FROM users WHERE username = "."'".$username."';";
+		$sql2 = "SELECT id FROM users WHERE username = "."'".$username."';";
+		$result = $db->query($sql2);
+		$row = $result->fetch_assoc();
+		$_SESSION['user_id'] = $row["id"];
         echo '<script>alert("You have successfully created an account");</script>';
         if ($type == 1) {
         	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=teachersetup.html">';
