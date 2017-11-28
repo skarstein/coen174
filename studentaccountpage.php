@@ -100,7 +100,7 @@ $connection->close();
 </script>
 <script>
     deleteFunction = function(course) {
-        window.location = "delete_course.php?course=" + course;
+        window.location = "delete_student_course.php?course=" + course;
     }
 </script>
 </tbody>
