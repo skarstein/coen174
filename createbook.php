@@ -27,7 +27,7 @@
     $bookpprotag_n = $db->real_escape_string($_POST["pprotag_n"]);
     $booksprotag_n = $db->real_escape_string($_POST["sprotag_n"]);
 
-    $sql = "INSERT INTO books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id) VALUES ('" .$booktitle. "', '" .$authorname. "','" .$copyrightdate."','".$lexilelevel."','".$numberofpages."','".$boolrecommended."','".$booktopic."','".$bookpprotag_n."','".$booksprotag_n."','".$_SESSION['user_id']."')";
+    $sql = "INSERT INTO books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id) VALUES ('" .$booktitle. "', '" .$authorname. "','" .$copyrightdate."','".$lexilelevel."','".$numberofpages."','".$boolrecommended."','".$booktopic."','".$bookpprotag_n."','".$booksprotag_n."','".$_SESSION['user_id']."', '".$_SESSION['course']."')";
 
     if ($db->query($sql) === TRUE) {
         echo '<script>alert("You have successfully added a book");</script>';
