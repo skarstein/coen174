@@ -26,7 +26,7 @@
     //rank them
     //add them to student database in that order
     $sql = "SELECT * FROM books WHERE course_id='".$_SESSION['course']."';";
-    $result = $connection->query($sql);
+    $result = $db->query($sql);
     while($row=$result->fetch_assoc()){
         $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommended']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."')";
     }
