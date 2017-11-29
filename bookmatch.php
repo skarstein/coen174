@@ -121,6 +121,16 @@
         }
     }
 
+    $sql = "SELECT id, rank FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id='".$_SESSION['course']."' ORDER BY rank DESC;";
+    $result = $db->query($sql);
+
+    $new_rank = 1;
+    while($row=mysqli_fetch_array($result)){
+        $sql = "UPDATE student_books SET rank = '".$new_rank."' WHERE id = '".$row['id']."';";
+        $updated = $db->query($sql);
+        $new_rank = $new_rank + 1;
+    }
+
     if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.php">';
