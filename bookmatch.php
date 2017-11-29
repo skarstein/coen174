@@ -28,9 +28,18 @@
     $sql = "SELECT * FROM books WHERE course_id='".$_SESSION['course']."';";
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
-        $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommended']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."')";
+        $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id, rank) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommended']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."', 0)";
         $saved = $db->query($sql);
     }
+
+    $sql = "SELECT id, lexile FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if $row['lexile'] - $lexilepref == 0 {
+            echo '<script>alert("Hello there");</script>';
+        }
+    }
+
 
     if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';
