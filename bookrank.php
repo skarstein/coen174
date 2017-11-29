@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  $servername = "dbserver.engr.scu.edu";
+  $username = 'shu';
+  $password = 'group2';
+  $dbname = 'sdb_shu';
+
+  $connection = mysqli_connect($servername, $username, $password, $dbname);
+
+  $sql = "SELECT topic, pprotag_n, sprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result = $connection->query($sql);
+?>
+
 <!DOCTYPE html>
 <HTML>
 <head>
