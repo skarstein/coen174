@@ -14,7 +14,9 @@
         die("Connection failed: " . $db->connect_error);
     }
 
-   $sql = "DELETE FROM books WHERE title = '".$_GET['title']."';";
+   $sql = "DELETE FROM books WHERE title = '".$_GET['title']."' AND course_id = '".$_SESSION['course']."';";
+   $db->query($sql);
+   $sql = "DELETE FROM student_books WHERE title = '".$_GET['title']."' AND course_id = '".$_SESSION['course']."';";
 
    if ($db->query($sql) === TRUE) {
        echo '<script>alert("You have successfully deleted the book");</script>';
