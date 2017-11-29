@@ -94,6 +94,33 @@
         }
     }
 
+    $sql = "SELECT id, topic FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if ($row['topic'] == $topicpref) {
+            $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
+        }
+    }
+
+    $sql = "SELECT id, pprotag_n FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if ($row['pprotag_n'] == $pprotagpref) {
+            $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
+        }
+    }
+
+    $sql = "SELECT id, sprotag_n FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if ($row['sprotag_n'] == $sprotagpref) {
+            $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
+        }
+    }
+
     if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.php">';
