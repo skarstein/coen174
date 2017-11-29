@@ -9,8 +9,8 @@
 
   $sql = "SELECT topic, pprotag_n, sprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
   $result = $connection->query($sql);
-  $result2 = $result
-  $result3 = $result
+  $result2 = $result;
+  $result3 = $result;
 ?>
 
 <!DOCTYPE html>
