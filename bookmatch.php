@@ -36,13 +36,17 @@
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
         if ($row['lexile'] - $lexilepref <= 0) {
-            echo '<script>alert("plus 10");</script>';
+            $sql = "UPDATE student_books SET rank = rank + 22 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
         } else if ($row['lexile'] - $lexilepref <= 150) {
-            echo '<script>alert("plus 9");</script>';
+            $sql = "UPDATE student_books SET rank = rank + 15 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
         } else if ($row['lexile'] - $lexilepref <= 300) {
-            echo '<script>alert("plus 8");</script>';
+            $sql = "UPDATE student_books SET rank = rank + 9 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
         } else if ($row['lexile'] - $lexilepref <= 450) {
-            echo '<script>alert("plus 7");</script>';
+            $sql = "UPDATE student_books SET rank = rank + 4 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
         }
     }
 
