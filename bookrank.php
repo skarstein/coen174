@@ -110,8 +110,8 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "recommended">
           <option value="">Is Recommended?</option>
-          <option value = "k"> yes </option>
-          <option value = "l"> no </option>
+          <option value = 0> yes </option>
+          <option value = 1> no </option>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
