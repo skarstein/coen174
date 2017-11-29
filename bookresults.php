@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="bookresults.css"/>
+<link rel="stylesheet" type="text/css" href="display.css"/>
 <script src="logout.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <meta charset="utf-8"/>
