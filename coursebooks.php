@@ -14,12 +14,12 @@
         die("Connection failed: " . $db->connect_error);
     }
 
-
-    $sql = "SELECT * FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id = '".$_GET['course']."';";
+    $_SESSION['course'] = $_GET['course'];
+    $sql = "SELECT * FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id = '".$_SESSION['course']."';";
     $result = $db->query($sql);
     if($result->num_rows == 0) 
     {
-      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookrankv2.html">';     
+      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookrank.php">';     
     } else {
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.html">';
     }

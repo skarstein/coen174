@@ -1,3 +1,20 @@
+<?php
+  session_start();
+  $servername = "dbserver.engr.scu.edu";
+  $username = 'shu';
+  $password = 'group2';
+  $dbname = 'sdb_shu';
+
+  $connection = mysqli_connect($servername, $username, $password, $dbname);
+
+  $sql = "SELECT topic FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result = $connection->query($sql);
+  $sql = "SELECT pprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result2 = $connection->query($sql);
+  $sql = "SELECT sprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result3 = $connection->query($sql);
+?>
+
 <!DOCTYPE html>
 <HTML>
 <head>
@@ -108,12 +125,12 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "topic">
           <option value="">Topic</option>
-          <option value = "m"> Coming of age story </option>
-          <option value = "n"> Psychological thriller </option>
-          <option value = "o"> Sea adventure </option>
-          <option value = "k"> Fallen angels </option>
-          <option value = "p"> Race & innocence </option>
-          <option value = "q"> Downfall of dynasty </option>
+          <?php
+          while($row=mysqli_fetch_array($result))
+          {
+            echo '<option value="'.htmlspecialchars($row['topic']).'">'.htmlspecialchars($row['topic']).'</option>';
+          }
+          ?>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
@@ -128,11 +145,12 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "primary protag nature">
           <option value="">Primary Protagonist Nature</option>
-          <option value = "r"> isolated </option>
-          <option value = "s"> god-like but vengeful </option>
-          <option value = "n"> the devil </option>
-          <option value = "t"> young & creative </option>
-          <option value = "u"> divorced single mother </option>
+          <?php
+          while($row=mysqli_fetch_array($result2))
+          {
+            echo '<option value="'.htmlspecialchars($row['pprotag_n']).'">'.htmlspecialchars($row['pprotag_n']).'</option>';
+          }
+          ?>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
@@ -147,11 +165,12 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "secondary protag nature">
           <option value="">Secondary Protagonist Nature</option>
-          <option value = "n"> submissive </option>
-          <option value = "o"> observant </option>
-          <option value = "m"> innocent </option>
-          <option value = "p"> runaway slave </option>
-          <option value = "q"> intellectually disabled </option>
+          <?php
+          while($row=mysqli_fetch_array($result3))
+          {
+            echo '<option value="'.htmlspecialchars($row['sprotag_n']).'">'.htmlspecialchars($row['sprotag_n']).'</option>';
+          }
+          ?>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
