@@ -59,6 +59,31 @@
         }
     }
 
+    $sql = "SELECT id, pages FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if ($pagepref == 'a') {
+            if (100 - $row['pages'] > 0) {
+                $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+                $updated = $db->query($sql);
+            }
+        } else if ($pagepref == 'b') {
+            if (300 - $row['pages'] > 0 && $row['pages'] - 100 >= 0) {
+                $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+                $updated = $db->query($sql);
+            }
+        } else if ($pagepref == 'c') {
+            if (500 - $row['pages'] > 0 && $row['pages'] - 300 >= 0) {
+                $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+                $updated = $db->query($sql);
+            }
+        } else if ($pagepref == 'd') {
+            if ($row['pages'] - 500 >= 0) {
+                $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+                $updated = $db->query($sql);
+            }
+        } 
+    }
 
     if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';

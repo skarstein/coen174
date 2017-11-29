@@ -92,9 +92,10 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "page">
           <option value="" >Page Count</option>
-          <option value = "h"> less than 100 </option>
-          <option value = "i"> 100-500 </option>
-          <option value = "j"> more than 500 </option>
+          <option value = "a"> less than 100 </option>
+          <option value = "b"> 100-300 </option>
+          <option value = "c"> 300-500 </option>
+          <option value = "d"> more than 500 </option>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
