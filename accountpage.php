@@ -68,7 +68,7 @@ $result = $connection->query($sql);
 <table class = "table-rwd" id="books">
  <thead>
    <tr>
-     <th>Title</th>
+     <th style="color:#dd5;">Title</th>
      <th>Author</th>
      <th>Copyright</th>
      <th>Lexile</th>
