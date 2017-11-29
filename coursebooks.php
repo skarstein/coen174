@@ -19,7 +19,7 @@
     $result = $db->query($sql);
     if($result->num_rows == 0) 
     {
-      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookrankv2.html">';     
+      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookrank.php">';     
     } else {
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.html">';
     }
