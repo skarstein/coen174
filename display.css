@@ -120,6 +120,7 @@ $breakpoint-alpha: 480px;
 }
 
 .table-rwd {
+  border-spacing: 10px 0;
   background: #34495E;
   color: #fff;
   border-radius: .4em;

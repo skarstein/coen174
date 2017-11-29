@@ -68,15 +68,15 @@ $result = $connection->query($sql);
 <table class = "table-rwd" id="books">
  <thead>
    <tr>
-     <th>Title</th>
-     <th>Author</th>
-     <th>Copyright</th>
-     <th>Lexile</th>
-     <th>Pages</th>
-     <th>Recommended</th>
-     <th>Topic</th>
-     <th>Protagonist Nature</th>
-     <th>Secondary Protagonist Nature</th>
+     <th style="color:#dd5;">Title</th>
+     <th style="color:#dd5;">Author</th>
+     <th style="color:#dd5;">Copyright</th>
+     <th style="color:#dd5;">Lexile</th>
+     <th style="color:#dd5;">Pages</th>
+     <th style="color:#dd5;">Recommended</th>
+     <th style="color:#dd5;">Topic</th>
+     <th style="color:#dd5;">Protagonist Nature</th>
+     <th style="color:#dd5;">Secondary Protagonist Nature</th>
      <td align="center" colspan = "2">Modify </td>
    </tr>
  </thead>

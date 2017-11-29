@@ -65,14 +65,14 @@
                 else
                 {
 
-                    echo '<script> alert("Wrong email/password. Try Again."); </script>';
+                    echo '<script> alert("Wrong password. Try Again."); </script>';
 		            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
                 }
         }
         else
         {
-            echo '<script> alert("Error: Cannot connect to database"); </script>';
-            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=homepage.html">';
+            echo '<script> alert("Error: Wrong username or password"); </script>';
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.html">';
         }
     }
     $db->close();
