@@ -122,7 +122,7 @@
         <select name = "topic">
           <option value="">Topic</option>
           <?php
-          while($row=mysql_fetch_array($result))
+          while($row=mysqli_fetch_array($result))
           {
             echo '<option value="'.htmlspecialchars($row['topic']).'">'.htmlspecialchars($row['topic']).'</option>';
           }
