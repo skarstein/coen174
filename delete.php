@@ -15,7 +15,7 @@
     }
 
    $sql = "DELETE FROM books WHERE title = '".$_GET['title']."' AND course_id = '".$_SESSION['course']."';";
-   $db->query($sql)
+   $db->query($sql);
    $sql = "DELETE FROM student_books WHERE title = '".$_GET['title']."' AND course_id = '".$_SESSION['course']."';";
 
    if ($db->query($sql) === TRUE) {
