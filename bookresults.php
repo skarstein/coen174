@@ -6,7 +6,7 @@
   $dbname = 'sdb_shu';
 
   $connection = mysqli_connect($servername, $username, $password, $dbname);
-  $sql = "SELECT * FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id='".$_SESSION['course']."';";
+  $sql = "SELECT * FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id='".$_SESSION['course']."' ORDER BY rank;";
   $result = $connection->query($sql);
 ?>
 
