@@ -9,6 +9,8 @@
 
   $sql = "SELECT topic, pprotag_n, sprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
   $result = $connection->query($sql);
+  $result2 = $result
+  $result3 = $result
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +144,7 @@
         <select name = "primary protag nature">
           <option value="">Primary Protagonist Nature</option>
           <?php
-          while($row=mysqli_fetch_array($result))
+          while($row=mysqli_fetch_array($result2))
           {
             echo '<option value="'.htmlspecialchars($row['pprotag_n']).'">'.htmlspecialchars($row['pprotag_n']).'</option>';
           }
@@ -162,7 +164,7 @@
         <select name = "secondary protag nature">
           <option value="">Secondary Protagonist Nature</option>
           <?php
-          while($row=mysqli_fetch_array($result))
+          while($row=mysqli_fetch_array($result3))
           {
             echo '<option value="'.htmlspecialchars($row['sprotag_n']).'">'.htmlspecialchars($row['sprotag_n']).'</option>';
           }
