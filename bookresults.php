@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  $servername = "dbserver.engr.scu.edu";
+  $username = 'shu';
+  $password = 'group2';
+  $dbname = 'sdb_shu';
+
+  $connection = mysqli_connect($servername, $username, $password, $dbname);
+  $sql = "SELECT * FROM student_books WHERE user_id ='".$_SESSION['user_id']."' AND course_id='".$_SESSION['course']."';";
+  $result = $connection->query($sql);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +25,13 @@
         <tr>
             <td>
             <ol>
-            <li><p>Catcher in the Rye</p></li>
-            <li><p>Crime and Punishment</p></li>
-            <li><p>Moby Dick</p></li>
-            <li><p>Huckleberry Finn</p></li>
-            <li><p>Sound and the Fury</p></li>
+            <?php
+                while($row=mysqli_fetch_array($result)) {
+                    echo '<li><p>'.htmlspecialchars($row['title']).'</p></li>';
+                }
+
+                $connection->close();
+            ?>
             </ol>
             </td>
         </tr>
