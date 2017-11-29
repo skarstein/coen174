@@ -21,7 +21,7 @@
     {
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookrank.php">';     
     } else {
-      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.html">';
+      echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.php">';
     }
 $db->close();
 ?>

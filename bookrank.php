@@ -40,9 +40,8 @@
     <li><button onclick="showSN()">Secondary Protagonist Nature</button></li>
   </ul>
   <!--<form action = "rankbook.php" method = "post">-->
-  <form action="bookresults.html">
+  <form action="bookmatch.php" method = "post">
     <button>Submit</button>
-  </form>
   <!--</form>-->
   </div>
 
@@ -50,7 +49,7 @@
       <div class="title">Enter Preference</div>
       <div id="llDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "" onclick="return false;" id="">
+        <select name = "lexile" onclick="return false;" id="">
           <option value="" >Lexile Level</option>
           <option value = "a"> 100 </option>
           <option value = "b"> 200 </option>
@@ -72,7 +71,7 @@
       </div>
       <div id="cdDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "" onclick="return false;" id="">
+        <select name = "copyright" onclick="return false;" id="">
           <option value="" >Copyright Date</option>
           <option value = "h"> 1980-1989 </option>
           <option value = "i"> 1990-1999 </option>
@@ -90,7 +89,7 @@
       </div>
       <div id="pcDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "copyrightdate">
+        <select name = "page">
           <option value="" >Page Count</option>
           <option value = "h"> less than 100 </option>
           <option value = "i"> 100-500 </option>
@@ -107,7 +106,7 @@
       </div>
       <div id="rDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "recommendedornah">
+        <select name = "recommended">
           <option value="">Is Recommended?</option>
           <option value = "k"> yes </option>
           <option value = "l"> no </option>
@@ -143,7 +142,7 @@
       </div>
       <div id="pnDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "primary protag nature">
+        <select name = "primary">
           <option value="">Primary Protagonist Nature</option>
           <?php
           while($row=mysqli_fetch_array($result2))
@@ -163,7 +162,7 @@
       </div>
       <div id="snDiv" style="display:none;">
       <div class="select_mate" data-mate-select="active" >
-        <select name = "secondary protag nature">
+        <select name = "secondary">
           <option value="">Secondary Protagonist Nature</option>
           <?php
           while($row=mysqli_fetch_array($result3))
@@ -182,6 +181,7 @@
       </div>
       </div>
   </div>
+  </form>
 
   <script src="node_modules/sortablejs/Sortable.js"></script></script>
   <script src="bookrank.js"></script>

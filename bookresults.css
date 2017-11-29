@@ -79,6 +79,22 @@ border-left-color: #fa8072;
 }
 
 button {
+    background-color: #777;
+    color: white;
+    padding: 14px 20px; 
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+} 
+
+ /*
+LOGOUT BUTTON
+*/
+
+.logout-btn {
+     background-color: #777;
+     color: white;
      line-height: 22px;
      width: 58px;
      font-size: 8pt;
@@ -90,4 +106,23 @@ button {
      right:0;
      border:none;
      cursor: pointer;
- }
+     border-radius: 5px;
+     padding: 14px;
+}
+
+.back-btn {
+    background-color: #777;
+    color: white;
+    line-height: 22px;
+    width: 58px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 40px;
+    margin-right: 120px;
+    position:absolute;
+    top:0;
+    right:0;
+    border:none;
+    cursor:pointer;
+    border-radius: 5px;
+}
