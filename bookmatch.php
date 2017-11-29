@@ -29,9 +29,10 @@
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
         $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommended']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."')";
+        $saved = $db->query($sql);
     }
 
-    if ($db->query($sql) === TRUE) {
+    if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';
         echo '<META HTTP-EQUIV="Refresh" Content="0; URL=bookresults.php">';
     } else {
