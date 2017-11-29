@@ -36,6 +36,7 @@
             </td>
         </tr>
     </table>
-    <button type="button" onclick="logout();">Logout</button>
+    <button type="button" class="logout-btn" onclick="logout();">Logout</button>
+    <a href="studentaccountpage.php"><button type="button" class="back-btn">Back</button></a>
 </body>
 </html>
