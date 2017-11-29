@@ -42,7 +42,6 @@
   <!--<form action = "rankbook.php" method = "post">-->
   <form action="bookmatch.php" method = "post">
     <button>Submit</button>
-  </form>
   <!--</form>-->
   </div>
 
@@ -182,6 +181,7 @@
       </div>
       </div>
   </div>
+  </form>
 
   <script src="node_modules/sortablejs/Sortable.js"></script></script>
   <script src="bookrank.js"></script>
