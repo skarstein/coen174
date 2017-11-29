@@ -7,9 +7,10 @@
 
   $connection = mysqli_connect($servername, $username, $password, $dbname);
 
-  $sql = "SELECT topic, pprotag_n, sprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $sql = "SELECT topic FROM books WHERE course_id = '".$_SESSION['course']."';";
   $result = $connection->query($sql);
-  $result2 = $result;
+  $sql = "SELECT pprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result2 = $connection->query($sql);
   $result3 = $result;
 ?>
 
