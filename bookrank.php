@@ -72,10 +72,12 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "copyright" onclick="return false;" id="">
           <option value="" >Copyright Date</option>
-          <option value = "h"> 1980-1989 </option>
-          <option value = "i"> 1990-1999 </option>
-          <option value = "j"> 2000-2009 </option>
-          <option value = "k"> 2010> </option>
+          <option value = 1960> 1960-1969 </option>
+          <option value = 1970> 1970-1979 </option>
+          <option value = 1980> 1980-1989 </option>
+          <option value = 1990> 1990-1999 </option>
+          <option value = 2000> 2000-2009 </option>
+          <option value = 2010> 2010-present> </option>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>

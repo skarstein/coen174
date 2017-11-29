@@ -50,6 +50,15 @@
         }
     }
 
+    $sql = "SELECT id, copyright FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $result = $db->query($sql);
+    while($row=mysqli_fetch_array($result)){
+        if ($row['copyright'] - $copyrightpref <= 9  && $row['copyright'] - $copyrightpref >= 0) {
+            $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
+            $updated = $db->query($sql);
+        }
+    }
+
 
     if ($saved === TRUE) {
         echo '<script>alert("Here are your matches!");</script>';
