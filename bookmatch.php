@@ -35,8 +35,14 @@
     $sql = "SELECT id, lexile FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
-        if $row['lexile'] - $lexilepref == 0 {
-            echo '<script>alert("Hello there");</script>';
+        if ($row['lexile'] - $lexilepref <= 0) {
+            echo '<script>alert("plus 10");</script>';
+        } else if ($row['lexile'] - $lexilepref <= 150) {
+            echo '<script>alert("plus 9");</script>';
+        } else if ($row['lexile'] - $lexilepref <= 300) {
+            echo '<script>alert("plus 8");</script>';
+        } else if ($row['lexile'] - $lexilepref <= 450) {
+            echo '<script>alert("plus 7");</script>';
         }
     }
 

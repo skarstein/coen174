@@ -51,14 +51,13 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "lexile" onclick="return false;" id="">
           <option value="" >Lexile Level</option>
-          <option value = "a"> 100 </option>
-          <option value = "b"> 200 </option>
-          <option value = "c"> 300 </option>
-          <option value = "d"> 400 </option>
-          <option value = "e"> 500 </option>
-          <option value = "f"> 600 </option>
-          <option value = "g"> 700 </option>
-          <option value "veryhard"> >700 </option>
+          <option value = 500> 500 </option>
+          <option value = 600> 600 </option>
+          <option value = 700> 700 </option>
+          <option value = 800> 800 </option>
+          <option value = 900> 900 </option>
+          <option value = 1000> 1000 </option>
+          <option value = 1100> 1100 </option>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
