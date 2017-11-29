@@ -11,7 +11,8 @@
   $result = $connection->query($sql);
   $sql = "SELECT pprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
   $result2 = $connection->query($sql);
-  $result3 = $result;
+    $sql = "SELECT pprotag_n FROM books WHERE course_id = '".$_SESSION['course']."';";
+  $result3 = $connection->query($sql);
 ?>
 
 <!DOCTYPE html>
