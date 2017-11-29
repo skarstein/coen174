@@ -121,12 +121,12 @@
       <div class="select_mate" data-mate-select="active" >
         <select name = "topic">
           <option value="">Topic</option>
-          <option value = "m"> Coming of age story </option>
-          <option value = "n"> Psychological thriller </option>
-          <option value = "o"> Sea adventure </option>
-          <option value = "k"> Fallen angels </option>
-          <option value = "p"> Race & innocence </option>
-          <option value = "q"> Downfall of dynasty </option>
+          <?php
+          while($row=mysql_fetch_array($result))
+          {
+            echo '<option value="'.htmlspecialchars($row['topic']).'">'.htmlspecialchars($row['topic']).'</option>';
+          }
+          ?>
         </select>
         <p class="select_option"  onclick="open_select(this)" ></p><span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
