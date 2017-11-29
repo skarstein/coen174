@@ -13,16 +13,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>My Account</title>
+<h1>Recommended Books</h1>
 <link rel="stylesheet" type="text/css" href="display.css"/>
 <script src="logout.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <meta charset="utf-8"/>
 </head>
 <body>
+<div id = "welcome">
+  <p>books for course <?php echo '"'.$_SESSION['course'].'"';?></p>
+</div>
     <button type="button" class="logout-btn" onclick="logout();">Logout</button>
     <a href="studentaccountpage.php"><button type="button" class="back-btn">Back</button></a>
-<hr>
-    <h4>Recommended Books</h4>
 
     <table class = "table-rwd" id="books">
      <thead>
