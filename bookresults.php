@@ -19,6 +19,8 @@
   <meta charset="utf-8"/>
 </head>
 <body>
+    <button type="button" class="logout-btn" onclick="logout();">Logout</button>
+    <a href="studentaccountpage.php"><button type="button" class="back-btn">Back</button></a>
 <hr>
     <h4>Recommended Books</h4>
     <table border=0 class="rectangle-list">
@@ -36,7 +38,5 @@
             </td>
         </tr>
     </table>
-    <button type="button" class="logout-btn" onclick="logout();">Logout</button>
-    <a href="studentaccountpage.php"><button type="button" class="back-btn">Back</button></a>
 </body>
 </html>
