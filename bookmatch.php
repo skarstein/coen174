@@ -28,7 +28,7 @@
     $sql = "SELECT * FROM books WHERE course_id='".$_SESSION['course']."';";
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
-        $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommended, topic, pprotag_n, sprotag_n, user_id, course_id, rank) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommended']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."', 0)";
+        $sql = "INSERT INTO student_books(title, author, copyright, lexile, pages, recommend, topic, pprotag_n, sprotag_n, user_id, course_id, rank) VALUES ('" .$row['title']. "', '" .$row['author']. "','" .$row['copyright']."','".$row['lexile']."','".$row['pages']."','".$row['recommend']."','".$row['topic']."','".$row['pprotag_n']."','".$row['sprotag_n']."','".$_SESSION['user_id']."', '".$_SESSION['course']."', 0)";
         $saved = $db->query($sql);
     }
 
@@ -85,10 +85,10 @@
         } 
     }
 
-    $sql = "SELECT id, recommended FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
+    $sql = "SELECT id, recommend FROM student_books WHERE course_id='".$_SESSION['course']."' AND user_id='".$_SESSION['user_id']."';";
     $result = $db->query($sql);
     while($row=mysqli_fetch_array($result)){
-        if ($row['recommended'] == $recommendedpref) {
+        if ($row['recommend'] == $recommendedpref) {
             $sql = "UPDATE student_books SET rank = rank + 1 WHERE id = '".$row['id']."';";
             $updated = $db->query($sql);
         }

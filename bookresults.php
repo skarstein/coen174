@@ -52,7 +52,7 @@
            <td align=\"center\">".htmlspecialchars($row['copyright'])."</td>
            <td align=\"center\">".htmlspecialchars($row['lexile'])."</td>
            <td align=\"center\">".htmlspecialchars($row['pages'])."</td>
-           <td align=\"center\">".htmlspecialchars($row['recommended'])."</td>
+           <td align=\"center\">".htmlspecialchars($row['recommend'])."</td>
            <td align=\"center\">".htmlspecialchars($row['topic'])."</td>
            <td align=\"center\">".htmlspecialchars($row['pprotag_n'])."</td>
            <td align=\"center\">".htmlspecialchars($row['sprotag_n'])."</td>
